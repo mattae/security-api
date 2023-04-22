@@ -13,7 +13,9 @@ public interface AuthenticationServiceExtension extends ExtensionPoint {
 
     boolean isCurrentUserInRole(String authority);
 
-    public Organisation.IdView organisation();
+    Organisation.IdView organisation();
+
+    List<Organisation.ShortView> getOrganisationHierarchy();
 
     List<String> grantedAuthorities();
 }
